@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+Projeto complementar do curso da Newtab: App em React de busca de pokémons utilizando a API PokéAPI.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
