@@ -1,5 +1,5 @@
 :root {
-	--card-border-color: #f3ce28;
+	--card-border-color: #ffcc01;
 }
 
 .Card {
@@ -15,7 +15,7 @@
 	background-size: cover;
 	padding: 5px 10px;
 	font-stretch: ultra-condensed;
-	box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+	box-shadow: 0 3px 5px rgba(0, 0, 0, .75);
 }
 
 .Card p {

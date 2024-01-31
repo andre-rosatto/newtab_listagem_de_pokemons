@@ -1,5 +1,8 @@
+.Search {
+	background: linear-gradient(#0d0e20, #202349);
+}
+
 .Search form {
-	background-color: #0d0e20;
 	width: 100%;
 	height: 100%;
 	padding: 20px;
