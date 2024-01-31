@@ -1,0 +1,47 @@
+.PageControls {
+	background-color: #ddd;
+	display: flex;
+	padding: 5px;
+	justify-content: center;
+	gap: 20px;
+}
+
+.PageControls .buttons-wrapper {
+	display: flex;
+	gap: 5px;
+}
+
+.PageControls input {
+	border-radius: 4px;
+	border: 1px solid #999;
+}
+
+.PageControls label {
+	font-size: 14px;
+}
+
+.PageControls input[type=tel] {
+	padding: 3px 5px;
+	width: 5ch;
+	text-align: right;
+	font-size: 14px;
+}
+
+.PageControls input[type=button] {
+	width: 25px;
+	cursor: pointer;
+}
+
+.PageControls input[type=button]:disabled {
+	cursor: default;
+}
+
+@media screen and (max-width: 540px) {
+	.PageControls {
+		gap: 7px;
+	}
+
+	.PageControls .buttons-wrapper {
+		gap: 2px;
+	}
+}

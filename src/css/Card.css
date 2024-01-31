@@ -1,4 +1,6 @@
-@import url('../css/main.css');
+:root {
+	--card-border-color: #f3ce28;
+}
 
 .Card {
 	width: 200px;
@@ -11,7 +13,7 @@
 	justify-content: flex-start;
 	background-blend-mode: multiply;
 	background-size: cover;
-	padding: 10px;
+	padding: 5px 10px;
 	font-stretch: ultra-condensed;
 	box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 }
@@ -23,30 +25,39 @@
 
 .Card h2 {
 	text-transform: capitalize;
-	font-size: 18px;
+	line-height: 20px;
 	color: white;
 	text-align: left;
 	margin-bottom: 5px;
 	width: 100%;
+	overflow: hidden;
 }
 
 .Card .artwork {
 	width: 100%;
+	aspect-ratio: 1 / 1;
 	border: 3px solid var(--card-border-color);
 	background-color: rgba(0, 0, 0, .5);
 }
 
-.Card .type-info {
-	background-size: 20px;
-	background-repeat: no-repeat;
-	padding-left: 25px;
-	line-height: 20px;
-	margin-bottom: 7px;
-}
-
 .Card .info-wrapper {
 	width: 100%;
-	margin-top: 3px;
 	display: flex;
 	justify-content: space-between;
+	margin-top: 3px;
+}
+
+.Card .type-wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.Card .type-info {
+	background-size: 15px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 18px;
+	margin-bottom: 12px;
+	margin-top: 5px;
 }

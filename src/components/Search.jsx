@@ -3,12 +3,12 @@ import '../css/Search.css';
 import { API, TYPES } from '../utils/utils';
 
 export default function Search({ pokemonNames, setSearchResults }) {
-	const [searchText, setSearchText] = useState('blastoise');
+	const [searchText, setSearchText] = useState('');
 	const [selectedTypes, setSelectedTypes] = useState(Array(18).fill(null));
 
 	const handleCheckboxChange = (idx) => {
 		const newCheckboxes = [...selectedTypes];
-		newCheckboxes[idx] = newCheckboxes[idx] ? null : TYPES[idx].name;
+		newCheckboxes[idx] = newCheckboxes[idx] ? null : Object.keys(TYPES)[idx];
 		setSelectedTypes(newCheckboxes);
 	}
 
@@ -30,8 +30,7 @@ export default function Search({ pokemonNames, setSearchResults }) {
 						if (nameFiltered.indexOf(pokemon.pokemon.name) > -1 && results.indexOf(pokemon.pokemon.data) === -1) {
 							results.push(pokemon.pokemon.name);
 						}
-					})
-					console.log(results);
+					});
 					setSearchResults(results);
 				});
 		}
@@ -43,14 +42,28 @@ export default function Search({ pokemonNames, setSearchResults }) {
 				<h2>Procurar Pokémons</h2>
 				<label className="heading">
 					Nome:
-					<input type="text" value={searchText} onInput={(e) => setSearchText(e.target.value)} />
+					<input
+						type="text"
+						value={searchText}
+						placeholder='Ex: blastoise'
+						onInput={(e) => setSearchText(e.target.value)}
+					/>
 				</label>
 				<label className="heading">Tipo:</label>
 				<div className="search-types">
-					{TYPES.map((item, idx) => <label style={{ color: item.color }} key={idx}><input type="checkbox" name={item.name} checked={selectedTypes[idx] !== null} onChange={() => handleCheckboxChange(idx)}></input>{item.displayName}</label>)}
+					{Object.keys(TYPES).map((type, idx) =>
+						<label style={{ color: TYPES[type].color }} key={idx}>
+							<input
+								type="checkbox"
+								name={type.name}
+								checked={selectedTypes[idx] !== null}
+								onChange={() => handleCheckboxChange(idx)}
+							/>
+							{TYPES[type].displayName}
+						</label>)
+					}
 				</div>
 				<button
-					disabled={!searchText.trim() && !selectedTypes.some(cb => cb)}
 					onClick={handleSearchClick}
 				>Procurar</button>
 			</form>
