@@ -1,0 +1,58 @@
+@import url('../css/main.css');
+
+.Search form {
+	background-color: #0d0e20;
+	width: 350px;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .75);
+}
+
+.Search h2 {
+	color: white;
+	font-size: 28px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.Search label {
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+
+.Search label.heading {
+	margin-top: 20px;
+	line-height: 24px;
+}
+
+.Search input[type=text] {
+	font-size: 16px;
+	padding: 5px;
+	border-radius: 4px;
+	border: none;
+}
+
+.Search .search-types {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.Search .search-types label {
+	flex-direction: row;
+	gap: 10px;
+	line-height: 20px;
+}
+
+.Search button {
+	width: 100%;
+	height: 30px;
+	margin-top: 20px;
+	cursor: pointer;
+	border-radius: 4px;
+	border: none;
+}
+
+.Search button:disabled {
+	cursor: default;
+	color: #999;
+}
