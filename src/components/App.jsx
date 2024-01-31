@@ -32,14 +32,15 @@ export default function App() {
 					{searchResults.slice(currentPage * 10, currentPage * 10 + 10).map((item, idx) =>
 						<Card
 							key={idx}
-							pokemonName={item}>
-						</Card>)
+							pokemonName={item}
+						></Card>)
 					}
 				</div>
 			</section>
 			<Search
 				pokemonNames={pokemonNames}
 				setSearchResults={setSearchResults}
+				setCurrentPage={setCurrentPage}
 			></Search>
 		</div>
 	);

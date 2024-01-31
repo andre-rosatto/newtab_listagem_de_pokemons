@@ -33,11 +33,26 @@
 	overflow: hidden;
 }
 
-.Card .artwork {
+.Card .artwork-wrapper {
+	position: relative;
 	width: 100%;
 	aspect-ratio: 1 / 1;
 	border: 3px solid var(--card-border-color);
 	background-color: rgba(0, 0, 0, .5);
+}
+
+.Card .artwork-wrapper p {
+	position: absolute;
+	right: 0;
+	border-left: 2px solid var(--card-border-color);
+	border-bottom: 2px solid var(--card-border-color);
+	padding: 2px 3px;
+	background-color: rgba(0, 0, 0, .5);
+	border-bottom-left-radius: 5px;
+}
+
+.Card .artwork-wrapper img {
+	width: 100%;
 }
 
 .Card .info-wrapper {

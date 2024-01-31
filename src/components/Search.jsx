@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../css/Search.css';
 import { API, TYPES } from '../utils/utils';
 
-export default function Search({ pokemonNames, setSearchResults }) {
+export default function Search({ pokemonNames, setSearchResults, setCurrentPage }) {
 	const [searchText, setSearchText] = useState('');
 	const [selectedTypes, setSelectedTypes] = useState(Array(18).fill(null));
 
@@ -18,6 +18,7 @@ export default function Search({ pokemonNames, setSearchResults }) {
 		if (!selectedTypes.some(type => type)) {
 			console.log(nameFiltered);
 			setSearchResults(nameFiltered);
+			setCurrentPage(0);
 			return;
 		}
 		const results = [];
@@ -32,6 +33,7 @@ export default function Search({ pokemonNames, setSearchResults }) {
 						}
 					});
 					setSearchResults(results);
+					setCurrentPage(0);
 				});
 		}
 	}
