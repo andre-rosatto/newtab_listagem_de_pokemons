@@ -67,7 +67,7 @@ export default function Search({ pokemonNames, setSearchResults, setCurrentPage 
 				</div>
 				<button
 					onClick={handleSearchClick}
-				>Procurar</button>
+				>Eu escolho você!</button>
 			</form>
 		</div>
 	);

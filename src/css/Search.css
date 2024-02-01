@@ -46,8 +46,9 @@
 
 .Search .search-types label {
 	flex-direction: row;
-	gap: 10px;
+	gap: 5px;
 	line-height: 20px;
+	font-weight: bold;
 }
 
 .Search button {
@@ -61,25 +62,40 @@
 
 @media screen and (max-width: 540px) {
 	.Search form {
-		width: 150px;
+		width: 125px;
 		padding: 10px;
 		background-position: -50px -25px;
+		font-size: 12px;
 	}
 
 	.Search h2 {
-		font-size: 22px;
+		font-size: 18px;
+		margin-bottom: 0;
+	}
+
+	.Search label.heading {
+		margin-top: 10px;
 	}
 
 	.Search input[type=text] {
-		font-size: 16px;
-		padding: 5px;
+		padding: 3px 5px;
 		border-radius: 4px;
 		border: none;
-		margin-top: 3px;
+		margin-top: 0;
+		font-size: 12px;
 	}
 
 	.Search .search-types {
 		display: flex;
 		flex-direction: column;
+	}
+
+	.Search .search-types label {
+		line-height: 18px;
+	}
+
+	.Search button {
+		margin-top: 15px;
+		font-size: 12px;
 	}
 }

@@ -19,7 +19,7 @@ export default function Card({ pokemonName }) {
 		}}>
 			<h2 style={{ fontSize: pokemonData?.name.length <= 20 ? 18 : 14 }}>{pokemonData?.name}</h2>
 			<div className="artwork-wrapper">
-				<p>#{pokemonData?.id}</p>
+				<p>{pokemonData?.id}</p>
 				<img
 					src={pokemonData?.sprites.other['official-artwork'].front_default || './assets/image_placeholder.png'}
 					alt={`imagem de ${pokemonData?.name}`}
