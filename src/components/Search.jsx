@@ -16,7 +16,6 @@ export default function Search({ pokemonNames, setSearchResults, setCurrentPage 
 		e.preventDefault();
 		let nameFiltered = pokemonNames.filter(name => name.includes(searchText.trim().toLowerCase()));
 		if (!selectedTypes.some(type => type)) {
-			console.log(nameFiltered);
 			setSearchResults(nameFiltered);
 			setCurrentPage(0);
 			return;
